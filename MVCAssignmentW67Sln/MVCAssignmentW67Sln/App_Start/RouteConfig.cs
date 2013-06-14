@@ -26,6 +26,15 @@ namespace MVCAssignmentW67Sln
                 //,
                 //namespaces: new[] {"MVCAssignmentW67Sln.Areas.ContactDetails.Controllers"}
             );
+
+            //routes.MapRoute(
+            //    "Default",
+            //    url: "ContactDetails/{controller}/{action}/{id}",
+            //    defaults: new { controller = "Management", action = "Index", id = UrlParameter.Optional }
+            //    //,
+            //    //namespaces: new[] { "MVCAssignmentW67Sln.Areas.ContactDetails.Controllers" 
+            //    //}
+            //);
         }
     }
 }

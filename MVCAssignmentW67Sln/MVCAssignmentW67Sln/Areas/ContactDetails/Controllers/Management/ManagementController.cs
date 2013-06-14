@@ -23,6 +23,15 @@ namespace MVCAssignmentW67Sln.Areas.ContactDetails.Controllers
         public ActionResult Index(ContactDetails.Models.ContactDetails details)
         {
             return View(details);
-        }        
+        }
+
+        ////[HttpPost]
+        ////public ActionResult Index(string xml)
+        ////{
+        ////    ViewModels.ContactDetailsViewModel details = new ViewModels.ContactDetailsViewModel();
+        ////    details = ViewModels.ContactDetailsViewModel.Deserialize(xml);
+
+        ////    return View();
+        ////}
     }
 }

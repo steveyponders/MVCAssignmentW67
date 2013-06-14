@@ -127,6 +127,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\ContactDetails\ContactDetailsAreaRegistration.cs" />
+    <Compile Include="Areas\ContactDetails\Controllers\Management\CreateController.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Areas\ContactDetails\Controllers\Management\ManagementController.cs" />
     <Compile Include="Areas\ContactDetails\Models\ContactDetails.cs" />
     <Compile Include="Areas\ContactDetails\ViewModels\ContactDetailsViewModel.cs" />
@@ -197,6 +200,7 @@
     <Content Include="Areas\ContactDetails\Views\Management\_AddressPartialView.cshtml" />
     <Content Include="Areas\ContactDetails\Views\Management\_ContactDetailsPartialView.cshtml" />
     <Content Include="Areas\ContactDetails\Views\Management\_PhonePartialView.cshtml" />
+    <Content Include="Areas\ContactDetails\Views\Create\Index.cshtml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
