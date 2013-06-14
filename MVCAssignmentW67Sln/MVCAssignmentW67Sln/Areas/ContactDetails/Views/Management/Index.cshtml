@@ -1,5 +1,4 @@
 ﻿@model MVCAssignmentW67Sln.Areas.ContactDetails.ViewModels.ContactDetailsViewModel
-@using MVCAssignmentW67Sln.Areas.ContactDetails.ViewModels
 
 @{
     ViewBag.Title = "Index";
@@ -7,24 +6,151 @@
 
 <h2>Index</h2>
 
-<fieldset>
-    <legend>Person details</legend>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
 
-    <div>@Html.Partial("_ContactDetailsPartialView", Model.ContactDetails)</div>
+    <fieldset>
+        <legend>ContactDetailsViewModel</legend>
 
-    <div>@Html.Partial("_AddressPartialView", Model.Address)</div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FirstName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FirstName)
+            @Html.ValidationMessageFor(model => model.FirstName)
+        </div>
 
-    <div>@Html.Partial("_PhonePartialView", Model.Phone)</div>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.LastName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.LastName)
+            @Html.ValidationMessageFor(model => model.LastName)
+        </div>
 
-</fieldset>
-<p>
-    @*@Html.ActionLink("Create", "Create", new { xml = ContactDetailsViewModel.Serialize(Model) /* id=Model.PrimaryKey */ }) |*@
-    
-    @*@Html.ActionLink("Create", "Create", "Create", new { xml = ContactDetailsViewModel.Serialize(Model)})*@
-@*</a>*@
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
 
-    <button onclick="location.href='@Url.Action("Index", "Create", new { xml = ContactDetailsViewModel.Serialize(Model)})';return false;">Create</button>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CellAreaCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CellAreaCode)
+            @Html.ValidationMessageFor(model => model.CellAreaCode)
+        </div>
 
-      |
-    @*@Html.ActionLink("Back to List", "Index")*@
-</p>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CellPhoneNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CellPhoneNumber)
+            @Html.ValidationMessageFor(model => model.CellPhoneNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CellCountryCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CellCountryCode)
+            @Html.ValidationMessageFor(model => model.CellCountryCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HomeAreaCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HomeAreaCode)
+            @Html.ValidationMessageFor(model => model.HomeAreaCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HomePhoneNumber)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HomePhoneNumber)
+            @Html.ValidationMessageFor(model => model.HomePhoneNumber)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HomeCountryCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HomeCountryCode)
+            @Html.ValidationMessageFor(model => model.HomeCountryCode)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HomeLine1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HomeLine1)
+            @Html.ValidationMessageFor(model => model.HomeLine1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HomeLine2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HomeLine2)
+            @Html.ValidationMessageFor(model => model.HomeLine2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HomeLine3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HomeLine3)
+            @Html.ValidationMessageFor(model => model.HomeLine3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HomeCity)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HomeCity)
+            @Html.ValidationMessageFor(model => model.HomeCity)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HomeProvince)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HomeProvince)
+            @Html.ValidationMessageFor(model => model.HomeProvince)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HomeCountry)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HomeCountry)
+            @Html.ValidationMessageFor(model => model.HomeCountry)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HomePostalCode)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HomePostalCode)
+            @Html.ValidationMessageFor(model => model.HomePostalCode)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,127 @@
+﻿@model MVCAssignmentW67Sln.Areas.ContactDetails.ViewModels.ContactDetailsViewModel
+
+@{
+    ViewBag.Title = "ViewDetails";
+}
+
+<h2>ViewDetails</h2>
+
+<fieldset>
+    <legend>ContactDetailsViewModel</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FirstName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FirstName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastName)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CellAreaCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CellAreaCode)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CellPhoneNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CellPhoneNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CellCountryCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CellCountryCode)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HomeAreaCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HomeAreaCode)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HomePhoneNumber)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HomePhoneNumber)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HomeCountryCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HomeCountryCode)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HomeLine1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HomeLine1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HomeLine2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HomeLine2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HomeLine3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HomeLine3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HomeCity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HomeCity)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HomeProvince)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HomeProvince)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HomeCountry)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HomeCountry)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.HomePostalCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.HomePostalCode)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -8,24 +8,27 @@ namespace MVCAssignmentW67Sln.Areas.ContactDetails.ViewModels
 {
     public class ContactDetailsViewModel
     {
-        public MVCAssignmentW67Sln.Areas.ContactDetails.Models.ContactDetails ContactDetails { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
 
-        public MVCAssignmentW67Sln.Areas.ContactDetails.Models.Address Address { get; set; }
+        //phone
+        public string CellAreaCode { get; set; }
+        public string CellPhoneNumber { get; set; }
+        public string CellCountryCode { get; set; }
 
-        public MVCAssignmentW67Sln.Areas.ContactDetails.Models.Phone Phone { get; set; }
+        //phone
+        public string HomeAreaCode { get; set; }
+        public string HomePhoneNumber { get; set; }
+        public string HomeCountryCode { get; set; }
 
-        // This will convert the passed XYZ object to JSON string
-        public static string Serialize(ContactDetailsViewModel xyz)
-        {
-            var serializer = new JavaScriptSerializer();
-            return serializer.Serialize(xyz);
-        }
-
-        // This will convert the passed JSON string back to XYZ object
-        public static ContactDetailsViewModel Deserialize(string data)
-        {
-            var serializer = new JavaScriptSerializer();
-            return serializer.Deserialize<ContactDetailsViewModel>(data);
-        }
+        //Address
+        public string HomeLine1 { get; set; }
+        public string HomeLine2 { get; set; }
+        public string HomeLine3 { get; set; }
+        public string HomeCity { get; set; }
+        public string HomeProvince { get; set; }
+        public string HomeCountry { get; set; }
+        public string HomePostalCode { get; set; }
     }
 }
