@@ -19,6 +19,10 @@
 </fieldset>
 <p>
     @*@Html.ActionLink("Create", "Create", new { xml = ContactDetailsViewModel.Serialize(Model) /* id=Model.PrimaryKey */ }) |*@
-    @Html.ActionLink("Create", "Create", "Create", new { xml = ContactDetailsViewModel.Serialize(Model)}) |
-    @Html.ActionLink("Back to List", "Index")
+    
+    @Html.ActionLink("Create", "Create", "Create", new { xml = ContactDetailsViewModel.Serialize(Model)})
+@*</a>*@
+
+      |
+    @*@Html.ActionLink("Back to List", "Index")*@
 </p>
