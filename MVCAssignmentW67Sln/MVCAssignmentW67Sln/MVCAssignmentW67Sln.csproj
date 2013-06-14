@@ -126,6 +126,10 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\ContactDetails\ContactDetailsAreaRegistration.cs" />
+    <Compile Include="Areas\ContactDetails\Controllers\Management\ManagementController.cs" />
+    <Compile Include="Areas\ContactDetails\Models\ContactDetails.cs" />
+    <Compile Include="Areas\ContactDetails\ViewModels\ContactDetailsViewModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -188,6 +192,11 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Areas\ContactDetails\Views\Web.config" />
+    <Content Include="Areas\ContactDetails\Views\Management\Index.cshtml" />
+    <Content Include="Areas\ContactDetails\Views\Management\_AddressPartialView.cshtml" />
+    <Content Include="Areas\ContactDetails\Views\Management\_ContactDetailsPartialView.cshtml" />
+    <Content Include="Areas\ContactDetails\Views\Management\_PhonePartialView.cshtml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -218,6 +227,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\ContactDetails\Views\Shared\" />
     <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>

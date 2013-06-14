@@ -1,0 +1,22 @@
+﻿@model MVCAssignmentW67Sln.Areas.ContactDetails.ViewModels.ContactDetailsViewModel
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<fieldset>
+    <legend>Person details</legend>
+
+    <div>@Html.Partial("_ContactDetailsPartialView", Model.ContactDetails)</div>
+
+    <div>@Html.Partial("_AddressPartialView", Model.Address)</div>
+
+    <div>@Html.Partial("_PhonePartialView", Model.Phone)</div>
+
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

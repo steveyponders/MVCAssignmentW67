@@ -22,6 +22,22 @@ namespace MVCAssignmentW67Sln
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            //AreaConfig.RegisterAreas();
+
+        }
+
+        public static class AreaConfig
+        {
+            public static void RegisterAreas()
+            {
+                // 
+                // Admin area . . .
+
+                var adminArea = new MVCAssignmentW67Sln.Areas.ContactDetails.ContactDetailsAreaRegistration();
+                var adminAreaContext = new AreaRegistrationContext(adminArea.AreaName, RouteTable.Routes);
+                adminArea.RegisterArea(adminAreaContext);
+            }
         }
     }
 }
