@@ -127,7 +127,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\ContactDetails\ContactDetailsAreaRegistration.cs" />
-    <Compile Include="Areas\ContactDetails\Controllers\Management\CreateController.cs">
+    <Compile Include="Areas\ContactDetails\Controllers\CreateController.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Areas\ContactDetails\Controllers\Management\ManagementController.cs" />

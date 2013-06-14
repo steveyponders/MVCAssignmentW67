@@ -20,8 +20,10 @@
 <p>
     @*@Html.ActionLink("Create", "Create", new { xml = ContactDetailsViewModel.Serialize(Model) /* id=Model.PrimaryKey */ }) |*@
     
-    @Html.ActionLink("Create", "Create", "Create", new { xml = ContactDetailsViewModel.Serialize(Model)})
+    @*@Html.ActionLink("Create", "Create", "Create", new { xml = ContactDetailsViewModel.Serialize(Model)})*@
 @*</a>*@
+
+    <button onclick="location.href='@Url.Action("Index", "Create", new { xml = ContactDetailsViewModel.Serialize(Model)})';return false;">Create</button>
 
       |
     @*@Html.ActionLink("Back to List", "Index")*@
